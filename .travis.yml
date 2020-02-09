@@ -1,4 +1,6 @@
-sudo: required
+language: node
+os:
+    - linux
 services:
     - docker
 
@@ -7,4 +9,3 @@ before_install:
 
 script:
     - docker run -e CI=true ajoypaul/docker-react:latest npm run test
-
